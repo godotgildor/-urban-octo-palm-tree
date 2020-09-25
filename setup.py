@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
+import os
+
 from setuptools import setup, find_namespace_packages
 
-with open("requirements_dev.txt") as reqs_file:
+current_dir = os.path.dirname(os.path.realpath(__file__))
+with open(os.path.join(current_dir, "requirements_dev.txt")) as reqs_file:
     requirements_dev = reqs_file.readlines()
 
 install_requires = requirements_dev
