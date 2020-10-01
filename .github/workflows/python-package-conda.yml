@@ -21,4 +21,4 @@ jobs:
         pip install tox tox-conda
     - name: Test with pytest
       run: |
-        tox -vv
+        PY_COLORS=1 tox -vv
