@@ -19,6 +19,8 @@ jobs:
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         # $CONDA/bin/conda env update --file environment.yml --name base
         pip install tox tox-conda
-    - name: Test with pytest
+    - name: Test with tox
+      env:
+        PYTEST_ADDOPTS: "--color=yes"
       run: |
         PY_COLORS=1 tox -vv
